@@ -1,0 +1,77 @@
+
+h2{
+    text-align: center;
+}
+.container-fluid{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #dad6d6;
+    padding-top: 5px;
+}
+
+input{
+    border: 2px solid #dad6d6;
+    border-radius: 20px;
+}
+table{
+    border: 0.5px solid black;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2), 10px 6px 20px 5px rgba(0, 0, 0, 0.19);
+
+
+}
+table:hover{
+    border: 1.5px solid black;
+}
+
+
+th{
+    border: 1.5px solid black;
+    text-align: center;
+}
+#gender, #country{
+    border: 2px solid #dad6d6;
+    border-radius: 20px;
+}
+.btn-success, .btn-warning{
+    width: 22%;
+    border-radius: 20px;
+    margin-left: 390px;
+}
+label{
+    font-weight: 600;
+    color: grey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn-danger{
+    border-radius: 20px;
+}
+form{
+    border: 1px solid #dad6d6;
+    margin-top: 40px;
+    background-color: #fff;
+    padding-left: 70px;
+    padding-right: 70px;
+    border: 1.5px solid;
+    border-color: black;
+    box-shadow: 10px 10px 20px 10px rgba(0, 0, 0, 0.2), 10px 6px 20px 5px rgba(0, 0, 0, 0.19);
+}
+form:hover{
+    border: 2px solid black;
+    box-shadow: 5px;
+}
+.alert{
+    margin-top: 10px;
+}
+p{
+    text-align: center;
+}
+
+p strong{
+    color: blue;
+    text-decoration: underline;
+}
+.btn-primary{
+    margin-left: 480px;
+    padding: 5px 30px 5px 30px;
+    border-radius: 50px;
+}

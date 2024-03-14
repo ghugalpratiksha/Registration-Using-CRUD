@@ -1,0 +1,288 @@
+<!-- <div class="container">
+  <h2>Registration Form</h2>
+  <div class="alert alert-success" *ngIf="alert">
+    <strong>Success!</strong> Indicates a successful or positive action.
+  </div>
+
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="firstname">First name:</label>
+      <input type="firtsname" class="form-control" id="firstname" placeholder="Enter Firstname" name="firstname"  [(ngModel)]="firstname">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="text">Last Name :</label>
+      <input type="text" class="form-control" id="lastname" placeholder="Enter Lastname" name="lastname"  [(ngModel)]="lastname">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="email">Email :</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter Email" name="email"  [(ngModel)]="email">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="pwd">Password :</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter Password" name="pwd"  [(ngModel)]="password">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="number">Number :</label>
+      <input type="number" class="form-control" id="number" placeholder="Enter Number" name="number"  [(ngModel)]="number">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="address">Address :</label>
+      <input type="text" class="form-control" id="address" placeholder="Enter Address" name="address"  [(ngModel)]="address">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="postal">Postal Code :</label>
+      <input type="text" class="form-control" id="postal" placeholder="Enter Postal Code" name="postal"  [(ngModel)]="postal">
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <br>
+      <select class="select form-control" id="country"  [(ngModel)]="country">
+        <option value="1">India</option>
+        <option value="2">Australia</option>
+        <option value="3">Canada</option>
+        <option value="4">Germany</option>
+        <option value="5">China</option>
+        <option value="6">Bangladesh</option>
+        <option value="7">Japan</option>
+        <option value="8">France</option>
+        <option value="9">Argentina</option>
+      </select>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="gender">Gender :</label>
+      <br>
+      <select class="select form-control" id="gender"  [(ngModel)]="gender">
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+        <option value="3">Other</option>
+      </select>
+    </div>
+    <br>
+    <br>
+    <div class="form-group">
+      <label for="DOB">DOB:</label>
+      <input type="date" class="form-control" id="DOB" placeholder="Enter Date Of Birth" name="DOB"  [(ngModel)]="DOB">
+    </div>
+    <br>
+    <br>
+    <button type="submit" class="btn btn-success" [disabled]="firstname == '' || lastname == '' " (click)="submit()">Submit</button> &nbsp;
+    <button type="update" class="btn btn-warning" (click)="update()">Update</button>
+  </form>
+</div>
+<br>
+<br>
+
+<div class="row">
+  <div class="table">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Firstame</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Number</th>
+          <th>Address</th>
+          <th>Postal</th>
+          <th>Country</th>
+          <th>Gender</th>
+          <th>Action</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody *ngFor="let item of data,let i=index">
+        <tr>
+          <td> {{item.firstname}} </td>
+          <td> {{item.lastname}} </td>
+          <td> {{item.email}} </td>
+          <td> {{item.password}} </td>
+          <td> {{item.number}} </td>
+          <td> {{item.address}} </td>
+          <td> {{item.postal}} </td>
+          <td> {{item.country}} </td>
+          <td> {{item.gender}} </td>
+          <td>
+            <button type="edit" class="btn btn-dark" (click)="edit(i,item)">Edit</button>
+          </td>
+          <td>
+            <button type="delete" class="btn btn-danger" (click)="delete(i)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div> -->
+
+<div class="container-fluid">
+
+  <div class="alert alert-success" *ngIf="alert">
+    <strong>Success!</strong> Your Form is successfully Submitted.
+  </div>
+
+  <form action="/action_page.php">
+
+    <div class="row">
+      <h2>Registration Form</h2>
+      <div class="col-lg-6">
+        <label>First Name :</label>
+        <br>
+        <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter First Name"
+          [(ngModel)]="firstname">
+      </div>
+      <div class="col-lg-6">
+        <label>Last Name :</label>
+        <br>
+        <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter Last Name"
+          [(ngModel)]="lastname">
+      </div>
+    </div><br>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <label>Email :</label>
+        <br>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" [(ngModel)]="email">
+      </div>
+      <div class="col-lg-6">
+        <label>Number :</label>
+        <br>
+        <input type="number" class="form-control" id="number" name="number" placeholder="Enter Number" [(ngModel)]="number">
+      </div>
+    </div><br>
+    
+    <div class="row">
+      <div class="col-lg-6">
+        <label>Password :</label>
+        <br>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" [(ngModel)]="password">
+      </div>
+      <div class="col-lg-6">
+        <label>Address :</label>
+        <br>
+        <input type="text" class="form-control" id="address" name="address" placeholder="Enter Address" [(ngModel)]="address">
+      </div>
+    </div><br>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <label>Gender :</label>
+        <br>
+        <select class="form-control" name="option" id="gender" [(ngModel)]="gender">
+          <option value="" selected disabled>Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div class="col-lg-6">
+        <label>DOB :</label>
+        <br>
+        <input type="date" class="form-control" id="birthdate" name="birthdate"[(ngModel)]="birthdate">
+      </div>
+    </div><br>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <label>Postal Code :</label>
+        <br>
+        <input type="postal" class="form-control" id="postal" name="postal" placeholder="Enter Postal Code"
+          [(ngModel)]="postal">
+      </div>
+      <div class="col-lg-6">
+        <label>Country :</label>
+        <br>
+        <select class="form-control" id="country" name="option" [(ngModel)]="country">
+          <option value="" disabled selected>Country</option>
+          <option>India</option>
+          <option>Australia</option>
+          <option>Bangladesh</option>
+          <option>Canada</option>
+          <option>France</option>
+          <option>Germany</option>
+          <option>Tamil Nadu</option>
+          <option>Japan</option>
+          <option>Argentina</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <button type="submit" class="btn btn-success" [disabled]="firstname == '' || lastname == '' " (click)="submit()" *ngIf="submitButton">Submit Information</button>&nbsp;
+        <button type="update" class="btn btn-warning" (click)="update()" *ngIf="updateButton">Update Information</button>
+      </div>
+    </div><br>
+    <p>By Clicking on Submit You Are Agree to Our <strong>Privacy Policy</strong></p>
+    <br>
+    <button type="button" class="btn btn-primary" routerLink="/login">Login</button>
+    <br>
+    <br>
+  </form>
+  <br>
+  <br>
+
+
+  <div class="row">
+    <div class="col-lg-12">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>FirstName</th>
+            <th>LastName</th>
+            <th>Email</th>
+            <th>Number</th>
+            <th>Password</th>
+            <th>Address</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>Postal-Code</th>
+            <th>Country</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+
+        <tbody *ngFor="let item of data;let i=index">
+          <tr>
+            <td> {{item.firstname}} </td>
+            <td> {{item.lastname}} </td>
+            <td> {{item.email}} </td>
+            <td> {{item.number}} </td>
+            <td> {{item.password}} </td>
+            <td> {{item.address}} </td>
+            <td> {{item.gender}} </td>
+            <td> {{item.birthdate}} </td>
+            <td> {{item.postal}} </td>
+            <td> {{item.country}} </td>
+            <td>
+              <button class="btn btn-danger" type="edit" (click)="edit(i,item)">Edit</button>
+            </td>
+            <td>
+              <button class="btn btn-danger" type="delete" (click)="delete(i)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
